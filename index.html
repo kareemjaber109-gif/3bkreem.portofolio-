@@ -269,10 +269,12 @@ footer a:hover{color:var(--cyan)}
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  #hero{grid-template-columns:1fr;gap:52px;text-align:center;min-height:auto;padding-bottom:60px}
+  #hero{grid-template-columns:1fr;gap:52px;text-align:center;min-height:auto;padding-bottom:60px;justify-items:center}
+  #hero > div:first-child{display:flex;flex-direction:column;align-items:center}
   .hero-btns{justify-content:center}
   .hero-desc{margin:0 auto 38px}
-  .hero-right{order:-1}
+  .hero-right{order:-1;width:100%;display:flex;justify-content:center}
+  .card-scene{margin:0 auto}
   .skills-cols{grid-template-columns:1fr;gap:0}
   .proj-grid{grid-template-columns:1fr 1fr}
   .edu-grid{grid-template-columns:1fr}
