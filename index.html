@@ -17,11 +17,11 @@
   --text:#e2e8f0;--text2:#cbd5e1;--muted:#64748b;--muted2:#94a3b8;
   --border:rgba(255,255,255,0.065);--border2:rgba(255,255,255,0.12);
 }
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--indigo) var(--bg2)}
+html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--indigo) var(--bg2);overflow-x:hidden}
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg2)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(var(--indigo),var(--pink));border-radius:99px}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none;line-height:1.6}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;width:100%;cursor:none;line-height:1.6}
 @media (hover: none) and (pointer: coarse) {
   body { cursor: default; }
   #c-dot, #c-ring { display: none !important; }
@@ -278,19 +278,30 @@ footer a:hover{color:var(--cyan)}
   .edu-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .contact-visual{display:none}
+  .s-title, .s-label, .divider { text-align: center; margin-left: auto; margin-right: auto; }
 }
 @media(max-width:640px){
-  section{padding:60px 20px}
+  section{padding:60px 20px; text-align: center;}
   .s-title{font-size:32px;letter-spacing:-1px}
   .hero-name{font-size:48px;letter-spacing:-1.5px}
-  .card-scene{width:260px;height:340px}
+  .card-scene{width:260px;height:340px; margin: 0 auto;}
   .f-avatar{width:70px;height:70px;font-size:22px}
-  .f-stats{gap:15px}
+  .f-stats{gap:15px; justify-content: center;}
   .f-stat-n{font-size:18px}
   .proj-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .nav-hbg{display:flex}
   footer{justify-content:center;text-align:center;padding:24px 20px}
+  .timeline { padding-left: 0; }
+  .timeline::before { display: none; }
+  .tl-card { padding: 25px 20px; text-align: center; }
+  .tl-card::before { display: none; }
+  .tl-bullets { padding-left: 0; align-items: center; }
+  .tl-bullets li { padding-left: 0; text-align: center; }
+  .tl-bullets li::before { display: none; }
+  .badges, .proj-stack, .chip-cloud, .str-chips { justify-content: center; }
+  .t-item { flex-direction: column; align-items: center; text-align: center; }
+  .lang-card { flex-direction: column; gap: 10px; text-align: center; }
 }
 </style>
 </head>
