@@ -269,10 +269,10 @@ footer a:hover{color:var(--cyan)}
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  #hero{grid-template-columns:1fr;gap:52px;text-align:center;min-height:auto;padding-bottom:60px;justify-items:center}
-  #hero > div:first-child{display:flex;flex-direction:column;align-items:center}
+  #hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:40px;padding-top:100px;min-height:auto;padding-bottom:60px}
+  #hero > div:first-child{width:100%;display:flex;flex-direction:column;align-items:center}
   .hero-btns{justify-content:center}
-  .hero-desc{margin:0 auto 38px}
+  .hero-desc{margin:0 auto 38px;max-width:100%}
   .hero-right{order:-1;width:100%;display:flex;justify-content:center}
   .card-scene{margin:0 auto}
   .skills-cols{grid-template-columns:1fr;gap:0}
@@ -283,13 +283,17 @@ footer a:hover{color:var(--cyan)}
   .s-title, .s-label, .divider { text-align: center; margin-left: auto; margin-right: auto; }
 }
 @media(max-width:640px){
-  section{padding:60px 20px; text-align: center;}
-  .s-title{font-size:32px;letter-spacing:-1px}
-  .hero-name{font-size:48px;letter-spacing:-1.5px}
-  .card-scene{width:260px;height:340px; margin: 0 auto;}
-  .f-avatar{width:70px;height:70px;font-size:22px}
-  .f-stats{gap:15px; justify-content: center;}
-  .f-stat-n{font-size:18px}
+  section{padding:60px 20px; text-align: center;overflow-x:hidden}
+  .s-title{font-size:30px;letter-spacing:-1px}
+  .hero-name{font-size:clamp(28px,9vw,40px);letter-spacing:-1px;line-height:1.1}
+  .hero-desc{font-size:14px}
+  .card-scene{width:240px;height:320px; margin: 0 auto;}
+  .orb{inset:-20px}
+  .ring1{inset:-10px}.ring2{inset:-25px}.ring3{inset:-40px}
+  .f-avatar{width:64px;height:64px;font-size:20px}
+  .f-stats{gap:12px; justify-content: center;}
+  .f-stat-n{font-size:16px}
+  .f-stat-l{font-size:9px}
   .proj-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .nav-hbg{display:flex}
